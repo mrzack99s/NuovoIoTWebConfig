@@ -7,7 +7,7 @@
  
  Initial setup wifi & web configure without code config. Make to easy for the user. I mean they unknows c++ code. 
 
-**=== Setter and Getter ===*
+**=== Setter and Getter ===**
 
 - Setter
 	- setResetButton(uint8_t,bool); // bool LOW,HIGH
