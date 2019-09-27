@@ -58,23 +58,6 @@ const char Footer_Page[] PROGMEM = R"=====(
   </form>
 </div>
 </body>
-<script type="text/javascript">
-
-xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myArr = JSON.parse(this.responseText);
-    document.getElementById("apName").value = myArr.APSSID;
-    document.getElementById("apPasswd").value = myArr.APPasswd;
-    document.getElementById("wifiName").value = myArr.WiFiSSID;
-    document.getElementById("wifiPasswd").value = myArr.WiFiPasswd;
-    document.getElementById("bToken").value = myArr.BToken;
-  }
-};
-xmlhttp.open("GET", http://192.168.10.1:8080/getInitValue, true);
-xmlhttp.send();
-
-
-</script>
 </html>
 )=====";
 
