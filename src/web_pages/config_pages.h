@@ -5,7 +5,7 @@
  */
 
 
-const char config_pages[] PROGMEM = R"=====(
+const char Header_Page[] PROGMEM = R"=====(
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,26 +51,30 @@ div {
 </center>
 <div>
   <form action="http://192.168.10.1:8080/config" method="POST">
-    <label>AP SSID ( Thing name )</label>
-    <input type="text" name="apName" placeholder="Enter AP_SSID">
+ )=====";   
 
-    <label>AP Password</label>
-    <input type="password"  name="apPasswd" placeholder="Enter AP Password">
-    
-    <label>WiFi SSID</label>
-    <input type="text" name="wifiName" placeholder="Enter WiFi_SSID">
-    
-    <label>WiFi Password</label>
-    <input type="password"  name="wifiPasswd" placeholder="Enter WiFi Password">
-    
-    <label>Blynk token key</label>
-    <input type="text"  name="bToken" placeholder="Enter Blynk token">
-
-  
+const char Footer_Page[] PROGMEM = R"=====(
     <input type="submit" value="Submit">
   </form>
 </div>
 </body>
+<script type="text/javascript">
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myArr = JSON.parse(this.responseText);
+    document.getElementById("apName").value = myArr.APSSID;
+    document.getElementById("apPasswd").value = myArr.APPasswd;
+    document.getElementById("wifiName").value = myArr.WiFiSSID;
+    document.getElementById("wifiPasswd").value = myArr.WiFiPasswd;
+    document.getElementById("bToken").value = myArr.BToken;
+  }
+};
+xmlhttp.open("GET", http://192.168.10.1:8080/getInitValue, true);
+xmlhttp.send();
+
+
+</script>
 </html>
 )=====";
 

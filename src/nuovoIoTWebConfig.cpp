@@ -116,8 +116,18 @@ void Nuovo::handle(){
 	            client.println("HTTP/1.1 200 OK");
 	            client.println("Content-type:text/html");
 	            client.println();
-	            client.print(config_pages);
-
+	            client.print(Header_Page);
+	            client.print("<label>AP SSID ( Thing name )</label>");
+	            client.print("<input type=\"text\" name=\"apName\" placeholder=\"Enter AP_SSID\" value=\""+getAPSSID()+"\">");
+	            client.print("<label>AP Password</label>");
+	            client.print("<input type=\"password\"  name=\"apPasswd\" placeholder=\"Enter AP Password\" value=\""+getAPPasswd()+"\">");
+	            client.print("<label>WiFi SSID</label>");
+	            client.print("<input type=\"text\" name=\"wifiName\" placeholder=\"Enter WiFi_SSID\" value=\""+getWiFiSSID()+"\">");
+	            client.print("<label>WiFi Password</label>");
+	            client.print("<input type=\"password\"  name=\"wifiPasswd\" placeholder=\"Enter WiFi Password\" value=\""+getWiFiPasswd()+"\">");
+	            client.print("<label>Blynk token key</label>");
+	            client.print("<input type=\"text\"  name=\"bToken\" placeholder=\"Enter Blynk token\" value=\""+getBToken()+"\">");
+	            client.print(Footer_Page);
 	            break;
 	          } else {
 	            currentLine = "";
