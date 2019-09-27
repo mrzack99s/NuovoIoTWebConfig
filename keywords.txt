@@ -1,0 +1,22 @@
+# Datatypes (KEYWORD1)
+Nuovo			KEYWORD1
+nuovoIoTWebConfig	KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+begin			KEYWORD2
+run				KEYWORD2
+init			KEYWORD2
+setResetButton	KEYWORD2
+setAPSSID		KEYWORD2
+setAPPasswd		KEYWORD2
+setWiFiSSID		KEYWORD2
+setWiFiPasswd	KEYWORD2
+setBToken		KEYWORD2
+handle			KEYWORD2
+getCheckSetup	KEYWORD2
+getAPSSID		KEYWORD2
+getAPPasswd		KEYWORD2
+getWiFiSSID		KEYWORD2
+getWiFiPasswd	KEYWORD2
+getBToken		KEYWORD2
+

@@ -4,6 +4,10 @@
 	email nuovo.td@gmail.com
  */
 
+#ifndef ESP32
+#error This code is intended to run on the ESP32 platform! Please check your Tools->Board setting.
+#endif
+
 #include <EEPROM.h>
 #include <WiFi.h>
 #include <DNSServer.h>
