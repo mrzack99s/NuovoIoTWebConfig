@@ -2,7 +2,7 @@
 
 >	© Copyright 2019 Nuovo, TD. <br>
 >	Author Chatdanai Phakaket <br>
->	email nuovo.td@gmail.com <br>
+>	email zchatdanai@gmail.com or nuovo.td@gmail.com <br>
 	
  Initial setup wifi & web configure without code config. Make to easy for the user. I mean they unknows c++ code. 
 
