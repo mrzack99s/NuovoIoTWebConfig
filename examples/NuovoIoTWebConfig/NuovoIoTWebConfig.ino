@@ -13,7 +13,7 @@ void setup() {
   Serial.begin(9600);
   nuovo.setResetButton(23, LOW);
   nuovo.init();
-  nuovo.begin();
+  nuovo.begin("Blynk");
   setupStatus = nuovo.getCheckSetup();
 
   if (setupStatus)

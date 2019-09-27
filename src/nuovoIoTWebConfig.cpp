@@ -15,6 +15,15 @@ IPAddress apIP(192, 168, 10, 1);
 portMUX_TYPE mux = portMUX_INITIALIZER_UNLOCKED;
 
 void Nuovo::begin(){
+
+	if(checkSetup())
+		run();
+	else
+		wizard();
+}
+
+void Nuovo::begin(String mode){
+	setMode(mode);
 	if(checkSetup())
 		run();
 	else
@@ -133,7 +142,8 @@ void Nuovo::pushArgs(String arg,int addr){
 
 void Nuovo::run(){
 	CreateAP();
-	//WiFiConnect();
+	if(Mode != "Blynk")
+		WiFiConnect();
 	Serial.println("Initial setup !!!");
 	Serial.print("AP Name = ");
 	Serial.println(getAPSSID());
@@ -141,6 +151,9 @@ void Nuovo::run(){
 	Serial.println(getWiFiSSID());
 	Serial.print("Blynk token = ");
 	Serial.println(getBToken());
+}
+void Nuovo::setMode(String mode){
+	Mode = mode;
 }
 void Nuovo::wizard(){
 	setAPSSID("NuovoIoTWebConfig");
@@ -200,33 +213,4 @@ void IRAM_ATTR Nuovo::resetSys() {
 	delay(4000);
 	ESP.restart();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

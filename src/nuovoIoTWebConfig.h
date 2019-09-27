@@ -14,6 +14,7 @@ class Nuovo
 {
 	public:
 		void begin();
+		void begin(String Mode);
 		void init();
 		void setResetButton(uint8_t pin,bool on);
 		void setAPSSID(String name);
@@ -37,9 +38,11 @@ class Nuovo
 	    int bTokenAddr;
 	    uint8_t resetButton = 0;
 	    bool resetButtonOn = HIGH;
+	    String Mode = "blynk";
 	    void pushArgs(String arg,int addr);
 	    void run();
 	    void wizard();
+	    void setMode(String Mode);
 	    void CreateAP();
 	    void startWebServer();
 	    bool checkSetup();
