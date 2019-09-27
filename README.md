@@ -37,8 +37,6 @@
 
 **=== How to use?  ===**
 
-*At void setup()*
-
 1. include library
 
 ```
@@ -50,6 +48,8 @@
 ```
 Nuovo nuovo;
 ```
+
+*At void setup()*
 
 3. If you have set reset button. You must set reset reset button before init(). If blank it means D0 to reset button.
 boolean HIGH,LOW ==> It means button input or input_pullup
