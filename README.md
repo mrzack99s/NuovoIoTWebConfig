@@ -1,10 +1,9 @@
+## NuovoIoTWebConfig
 
-	© Copyright 2019 Nuovo, TD.
-	Author Chatdanai Phakaket
-	email nuovo.td@gmail.com
- 
- 
- 
+>	© Copyright 2019 Nuovo, TD. <br>
+>	Author Chatdanai Phakaket <br>
+>	email nuovo.td@gmail.com <br>
+	
  Initial setup wifi & web configure without code config. Make to easy for the user. I mean they unknows c++ code. 
 
 **=== Setter and Getter ===**
