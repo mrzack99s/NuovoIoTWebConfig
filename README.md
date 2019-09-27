@@ -64,10 +64,17 @@ nuovo.setResetButton(pin, LOW);
 nuovo.init();
 ```
 
-5. Then, success all above
+5. Then, success all above, If you don't want to set mode use this below
 
 ```
 nuovo.begin();
+```
+
+But If you want to set mode. Why you should set mode? -> set for initial wifi. <br>
+You can set mode with function in this below.
+
+```
+nuovo.begin("Blynk");
 ```
 
 *At void loop()*
